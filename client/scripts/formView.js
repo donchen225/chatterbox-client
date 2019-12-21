@@ -4,12 +4,17 @@ var FormView = {
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
+    $('body').on('click', function(event) {
+      if (event.target.className === 'username') {
+        Friends.toggleStatus(event.target.innerHTML);
+      }
+    });
   },
 
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-    
+
     console.log('click!');
   },
 

@@ -18,11 +18,10 @@ var App = {
   },
 
   fetch: function(callback = ()=>{}) {
-    Parse.readAll((data) => {
+    Parse.readAll((data) => { // if API call is successful, run success callback
       // examine the response from the server request:
-      MessagesView.render(data.results);
-
-      return data;
+      MessagesView.render(data);
+      callback(); // call stopSpinner()
     });
   },
 

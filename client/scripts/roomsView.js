@@ -10,7 +10,7 @@ var RoomsView = {
   },
   renderRoom: function(roomName) {
     Rooms.roomname = roomName;
-    this.$select.append(Rooms.roomname);
+    this.$select.append('<li> Rooms.roomname </li>');
   }
 
 };
