@@ -1,4 +1,4 @@
+// state
 var Rooms = {
-
 
 };
